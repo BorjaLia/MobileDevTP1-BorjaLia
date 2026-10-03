@@ -24202,7 +24202,6 @@ GameObject:
   - component: {fileID: 6246}
   - component: {fileID: 13082}
   - component: {fileID: 12392}
-  - component: {fileID: 1819207276}
   m_Layer: 0
   m_Name: GameMgr
   m_TagString: Untagged
@@ -113868,6 +113867,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TiempoDeJuego: 60
+  PauseAction: {fileID: 1074333226303360754, guid: e7160758570722d40ab3152cf83e30f8,
+    type: 3}
+  RetryAction: {fileID: -2256312683937666112, guid: e7160758570722d40ab3152cf83e30f8,
+    type: 3}
+  SkipAction: {fileID: -4976109719261893767, guid: e7160758570722d40ab3152cf83e30f8,
+    type: 3}
   EstAct: 0
   PlayerInfo1:
     FinCalibrado: 0
@@ -128896,6 +128901,12 @@ PrefabInstance:
       propertyPath: InputAct
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114475702172432364, guid: b81b1a58a0f14c9439cbdd014e695f71,
+        type: 3}
+      propertyPath: SteerAction
+      value: 
+      objectReference: {fileID: -5974891532212632116, guid: e7160758570722d40ab3152cf83e30f8,
+        type: 3}
     - target: {fileID: 114643806136207610, guid: b81b1a58a0f14c9439cbdd014e695f71,
         type: 3}
       propertyPath: IdPlayer
@@ -128978,7 +128989,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Controlador: {fileID: 0}
-  miInput: 1
+  moveAction: {fileID: 7422752969630898536, guid: e7160758570722d40ab3152cf83e30f8,
+    type: 3}
   Desde: {fileID: 13040}
   Hasta: {fileID: 13041}
 --- !u!850595691 &377401566
@@ -129188,6 +129200,17 @@ PrefabInstance:
       propertyPath: ManoIzq
       value: 
       objectReference: {fileID: 4626}
+    - target: {fileID: 114475702172432364, guid: b81b1a58a0f14c9439cbdd014e695f71,
+        type: 3}
+      propertyPath: SteerAction
+      value: 
+      objectReference: {fileID: 8660617830568401876, guid: e7160758570722d40ab3152cf83e30f8,
+        type: 3}
+    - target: {fileID: 114475702172432364, guid: b81b1a58a0f14c9439cbdd014e695f71,
+        type: 3}
+      propertyPath: SteerAction.m_Name
+      value: Steer
+      objectReference: {fileID: 0}
     - target: {fileID: 114911345111112572, guid: b81b1a58a0f14c9439cbdd014e695f71,
         type: 3}
       propertyPath: CamDescarga
@@ -129569,7 +129592,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Controlador: {fileID: 0}
-  miInput: 0
+  moveAction: {fileID: -4995497104522948180, guid: e7160758570722d40ab3152cf83e30f8,
+    type: 3}
   Desde: {fileID: 13044}
   Hasta: {fileID: 13043}
 --- !u!1 &1049659492 stripped
@@ -129715,7 +129739,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Controlador: {fileID: 0}
-  miInput: 0
+  moveAction: {fileID: -4995497104522948180, guid: e7160758570722d40ab3152cf83e30f8,
+    type: 3}
   Desde: {fileID: 13062}
   Hasta: {fileID: 13063}
 --- !u!1 &1425887806 stripped
@@ -129806,7 +129831,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Controlador: {fileID: 0}
-  miInput: 1
+  moveAction: {fileID: 7422752969630898536, guid: e7160758570722d40ab3152cf83e30f8,
+    type: 3}
   Desde: {fileID: 13017}
   Hasta: {fileID: 13016}
 --- !u!1 &1661771823
@@ -129895,36 +129921,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661771823}
   m_CullTransparentMesh: 1
---- !u!114 &1819207276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: 0}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: 
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -247,14 +247,6 @@ public class GameManager : MonoBehaviour
 		
 		GUI.skin = null;
 	}
-	
-	private void OnSteerP1(InputAction.CallbackContext context)
-	{
-        float axisValue = context.ReadValue<float>();
-
-
-		
-    }
 
 
 	//----------------------------------------------------------//

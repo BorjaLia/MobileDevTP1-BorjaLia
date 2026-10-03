@@ -1,11 +1,15 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.InputSystem;
 
 public class AnimMngDesc : MonoBehaviour 
 {
 	public string AnimEntrada = "Entrada";
 	public string AnimSalida = "Salida";
 	public ControladorDeDescarga ContrDesc;
+
+	public InputActionReference enterAction;
+	public InputActionReference exitAction;
 	
 	enum AnimEnCurso{Salida,Entrada,Nada}
 	AnimEnCurso AnimAct = AnimMngDesc.AnimEnCurso.Nada;
@@ -21,9 +25,9 @@ public class AnimMngDesc : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if(Input.GetKeyDown(KeyCode.Z))
+		if(enterAction.action.IsPressed())
 			Entrar();
-		if(Input.GetKeyDown(KeyCode.X))
+		if(exitAction.action.IsPressed())
 			Salir();
 		
 		switch(AnimAct)

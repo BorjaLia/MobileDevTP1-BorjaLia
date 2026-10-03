@@ -113285,6 +113285,10 @@ MonoBehaviour:
   AnimEntrada: Entrada
   AnimSalida: Salida
   ContrDesc: {fileID: 0}
+  enterAction: {fileID: -4976109719261893767, guid: e7160758570722d40ab3152cf83e30f8,
+    type: 3}
+  exitAction: {fileID: 1074333226303360754, guid: e7160758570722d40ab3152cf83e30f8,
+    type: 3}
   PuertaAnimada: {fileID: 1425887806}
 --- !u!114 &13020
 MonoBehaviour:
@@ -113301,6 +113305,10 @@ MonoBehaviour:
   AnimEntrada: Entrada
   AnimSalida: Salida
   ContrDesc: {fileID: 0}
+  enterAction: {fileID: -4976109719261893767, guid: e7160758570722d40ab3152cf83e30f8,
+    type: 3}
+  exitAction: {fileID: 1074333226303360754, guid: e7160758570722d40ab3152cf83e30f8,
+    type: 3}
   PuertaAnimada: {fileID: 1049659492}
 --- !u!114 &13021
 MonoBehaviour:
@@ -128905,7 +128913,7 @@ PrefabInstance:
         type: 3}
       propertyPath: SteerAction
       value: 
-      objectReference: {fileID: -5974891532212632116, guid: e7160758570722d40ab3152cf83e30f8,
+      objectReference: {fileID: -5310456749692632786, guid: e7160758570722d40ab3152cf83e30f8,
         type: 3}
     - target: {fileID: 114643806136207610, guid: b81b1a58a0f14c9439cbdd014e695f71,
         type: 3}
@@ -129450,7 +129458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Controlador: {fileID: 0}
-  moveAction: {fileID: -4995497104522948180, guid: e7160758570722d40ab3152cf83e30f8,
+  moveAction: {fileID: 8660617830568401876, guid: e7160758570722d40ab3152cf83e30f8,
     type: 3}
   Desde: {fileID: 13062}
   Hasta: {fileID: 13063}
@@ -129505,7 +129513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Controlador: {fileID: 0}
-  moveAction: {fileID: 7422752969630898536, guid: e7160758570722d40ab3152cf83e30f8,
+  moveAction: {fileID: -5310456749692632786, guid: e7160758570722d40ab3152cf83e30f8,
     type: 3}
   Desde: {fileID: 13017}
   Hasta: {fileID: 13016}
@@ -129621,6 +129629,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022892562319939836, guid: 47456396a47b64442940d6201dde0b36,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285316822926147292, guid: 47456396a47b64442940d6201dde0b36,
+        type: 3}
+      propertyPath: m_ControlPath
+      value: <Gamepad>/rightStick
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -129745,6 +129763,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022892562319939836, guid: 47456396a47b64442940d6201dde0b36,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285316822926147292, guid: 47456396a47b64442940d6201dde0b36,
+        type: 3}
+      propertyPath: m_ControlPath
+      value: <Gamepad>/leftStick
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

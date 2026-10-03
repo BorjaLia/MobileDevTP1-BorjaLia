@@ -142,6 +142,17 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "",
+                    "id": "086017e2-89c0-4119-8b2c-e0a506edfe22",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerOne",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "Keyboard 2D Vector",
                     "id": "d80e11f8-5655-4f5e-9102-051729ba33bf",
                     "path": "2DVector",
@@ -195,6 +206,17 @@
                     "action": "PlayerTwo",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "aa321978-2453-4051-9bca-6d8863aa2408",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerTwo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

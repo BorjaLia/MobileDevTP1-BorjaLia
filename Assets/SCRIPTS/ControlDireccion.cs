@@ -96,7 +96,7 @@ public class ControlDireccion : MonoBehaviour
             case TipoInput.Arrows:
                 if (Habilitado)
                 {
-                    float gyro = SteerAction.action.ReadValue<float>();
+                    float gyro = SteerAction.action.ReadValue<Vector2>().x;
                     if (gyro == 0) break;
                   
                     gameObject.GetComponent<CarController>().SetGiro((gyro > 0 ? 1 : -1));

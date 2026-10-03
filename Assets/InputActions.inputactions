@@ -14,6 +14,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "SteerP2",
+                    "type": "Value",
+                    "id": "4dfcd055-cb7c-4c01-8762-d97b868eb946",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -51,15 +60,37 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "25d30d8f-e00a-432c-91d0-697cb23c332b",
-                    "path": "<Touchscreen>/position/x",
+                    "name": "Keyboard 1D Axis",
+                    "id": "684180f5-5815-4a52-818f-1dbc163509d7",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SteerP1",
-                    "isComposite": false,
+                    "action": "SteerP2",
+                    "isComposite": true,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "a8c192e9-0c3a-4975-b7eb-0130da4e4c6a",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SteerP2",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "107e1463-24d8-45d4-a177-6c9a629a9c0f",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SteerP2",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

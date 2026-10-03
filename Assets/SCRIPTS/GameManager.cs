@@ -121,17 +121,17 @@ public class GameManager : MonoBehaviour
 				}
 			}
 
-                //if (PlayerInfo1.PJ == null && Input.GetKeyDown(KeyCode.W)) {
+                if (PlayerInfo1.PJ == null/* && Input.GetKeyDown(KeyCode.W)*/) {
                     PlayerInfo1 = new PlayerInfo(0, Player1);
                     PlayerInfo1.LadoAct = Visualizacion.Lado.Izq;
                     SetPosicion(PlayerInfo1);
-                //}
+                }
 
-                //if (PlayerInfo2.PJ == null && Input.GetKeyDown(KeyCode.UpArrow)) {
+                if (PlayerInfo2.PJ == null/* && Input.GetKeyDown(KeyCode.UpArrow)*/) {
                     PlayerInfo2 = new PlayerInfo(1, Player2);
                     PlayerInfo2.LadoAct = Visualizacion.Lado.Der;
                     SetPosicion(PlayerInfo2);
-                //}
+                }
 			
 			//cuando los 2 pj terminaron los tutoriales empiesa la carrera
 			if(PlayerInfo1.PJ != null && PlayerInfo2.PJ != null)

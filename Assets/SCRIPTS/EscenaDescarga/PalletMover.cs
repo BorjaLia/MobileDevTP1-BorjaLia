@@ -15,8 +15,6 @@ public class PalletMover : ManejoPallets
     {
         Vector2 dir = moveAction.action.ReadValue<Vector2>();
 
-        Debug.Log(dir);
-
         if (!Tenencia() && Desde.Tenencia() && dir == Vector2.left)
         {
             PrimerPaso();

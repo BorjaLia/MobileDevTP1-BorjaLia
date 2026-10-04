@@ -6,13 +6,13 @@ using UnityEngine;
 public class TouchInputManager : MonoBehaviour
 {
     [Serializable]
-    public class Inputs {
+    public class TouchInputs {
 
         [SerializeField] public CustomHorizontalController driveControl;
         [SerializeField] public CustomSwipeController handleControl;
     }
 
-    [SerializeField] public List<Inputs> inputList = new List<Inputs>();
+    [SerializeField] public List<TouchInputs> inputList = new List<TouchInputs>();
 
     public enum TouchControlType { DriveControl,HandleControl }
 
@@ -40,7 +40,7 @@ public class TouchInputManager : MonoBehaviour
 
     private void Start()
     {
-        if (inputList.Count < 2) { Debug.LogWarning("Less than 2 inputs selected!"); }
+        if (inputList.Count < 2) { Debug.LogWarning("Less than 2 Touch inputs selected!"); }
     }
 
     public void SetControlType(TouchControlType type)
@@ -52,5 +52,11 @@ public class TouchInputManager : MonoBehaviour
                 input.driveControl.gameObject.SetActive(type == TouchControlType.DriveControl);
                 input.handleControl.gameObject.SetActive(type == TouchControlType.HandleControl);
         }
+    }
+
+    public void RegisterInput(TouchInputs input)
+    {
+        inputList.Add(input);
+        Debug.Log("Registered new input");
     }
 }

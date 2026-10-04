@@ -415,6 +415,8 @@ public class GameManager : MonoBehaviour
 	
 	void CambiarACarrera()
 	{
+		TouchInputManager.Get().SetControlType(TouchInputManager.TouchControlType.DriveControl);
+
 		//Debug.Log("CambiarACarrera()");
 		
 		Esqueleto1.transform.position = PosEsqsCarrera[0];

@@ -11,9 +11,17 @@ public class PalletMover : ManejoPallets
     public ManejoPallets Desde, Hasta;
     bool segundoCompleto = false;
 
+    Vector2 lastDir; 
     private void Update()
     {
-        Vector2 dir = moveAction.action.ReadValue<Vector2>();
+        Vector2 dir = moveAction.action.ReadValue<Vector2>(); 
+
+        if(lastDir != dir && dir != Vector2.zero)
+        {
+            Debug.Log("dir key: " + dir);
+        }
+
+        lastDir = dir;
 
         if (!Tenencia() && Desde.Tenencia() && dir == Vector2.left)
         {

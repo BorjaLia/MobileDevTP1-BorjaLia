@@ -129530,6 +129530,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 2279754853296937566, guid: 47456396a47b64442940d6201dde0b36,
+        type: 3}
+      propertyPath: m_ControlPath
+      value: <Gamepad>/rightStick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279754853296937566, guid: 47456396a47b64442940d6201dde0b36,
+        type: 3}
+      propertyPath: stopSwipeSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279754853296937566, guid: 47456396a47b64442940d6201dde0b36,
+        type: 3}
+      propertyPath: startSwipeSpeed
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 2548008408621968807, guid: 47456396a47b64442940d6201dde0b36,
         type: 3}
       propertyPath: m_Pivot.x
@@ -129630,7 +129645,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7022892562319939836, guid: 47456396a47b64442940d6201dde0b36,
+    - target: {fileID: 4943743439705074470, guid: 47456396a47b64442940d6201dde0b36,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -129663,6 +129678,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279754853296937566, guid: 47456396a47b64442940d6201dde0b36,
+        type: 3}
+      propertyPath: m_ControlPath
+      value: <Gamepad>/leftStick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279754853296937566, guid: 47456396a47b64442940d6201dde0b36,
+        type: 3}
+      propertyPath: stopSwipeSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279754853296937566, guid: 47456396a47b64442940d6201dde0b36,
+        type: 3}
+      propertyPath: startSwipeSpeed
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 2548008408621968807, guid: 47456396a47b64442940d6201dde0b36,
         type: 3}
@@ -129764,7 +129794,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7022892562319939836, guid: 47456396a47b64442940d6201dde0b36,
+    - target: {fileID: 4943743439705074470, guid: 47456396a47b64442940d6201dde0b36,
         type: 3}
       propertyPath: m_IsActive
       value: 0

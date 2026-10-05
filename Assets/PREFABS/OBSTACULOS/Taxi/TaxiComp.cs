@@ -43,6 +43,8 @@ public class TaxiComp : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
+		if (SettingsManager.currentDifficulty < SettingsManager.Difficulty.Hard) Destroy(this.gameObject);
+
 		TiempEntreGiro = (float) Random.Range(TiempCadaCuantoDobla_MaxMin.x, TiempCadaCuantoDobla_MaxMin.y);
 		RotIni = this.transform.localEulerAngles;
 		PosIni = transform.position;

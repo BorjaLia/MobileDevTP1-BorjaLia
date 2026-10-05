@@ -16,11 +16,11 @@ public class Obstaculo : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		
-	}
-	
-	// Update is called once per frame
-	void Update () 
+		if (SettingsManager.currentDifficulty < SettingsManager.Difficulty.Medium) Destroy(this.gameObject);
+    }
+
+    // Update is called once per frame
+    void Update () 
 	{
 		if(Chocado)
 		{

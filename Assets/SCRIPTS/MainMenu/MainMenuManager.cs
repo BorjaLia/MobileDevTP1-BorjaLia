@@ -14,16 +14,20 @@ public class MainMenuManager : MonoBehaviour
 
     void Start()
     {
-        mainPanel.SetActive(true);
-        settingsPanel.SetActive(false);
-        creditsPanel.SetActive(false);
-
-        loadingScreen.SetActive(false);
+        ToMainMenu();
     }
 
     void Update()
     {
 
+    }
+    public void ToMainMenu()
+    {
+        mainPanel.SetActive(true);
+        settingsPanel.SetActive(false);
+        creditsPanel.SetActive(false);
+
+        loadingScreen.SetActive(false);
     }
 
     public void OnSingleplayer()

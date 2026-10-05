@@ -1,0 +1,47 @@
+using UnityEngine;
+
+public class SettingsManager : MonoBehaviour
+{
+    private static int vsync = 0;
+
+    [SerializeField] private TMPro.TextMeshProUGUI difficultyText;
+    [SerializeField] private TMPro.TextMeshProUGUI fullscreenText;
+    [SerializeField] private TMPro.TextMeshProUGUI vsynText;
+
+    public enum Difficulty { Easy,Medium,Hard }
+
+    public static  Difficulty currentDifficulty;
+
+    void Start()
+    {
+        vsync = QualitySettings.vSyncCount;
+
+        difficultyText.text = currentDifficulty.ToString();
+        fullscreenText.text = (Screen.fullScreen ? "Fullscreen: On" : "Fullscreen: Off");
+        vsynText.text = (vsync == 0 ? "Vsync: Off" : "Vsync: On");
+    }
+
+    public void OnDifficulty()
+    {
+        if (currentDifficulty != Difficulty.Hard)
+        {
+            currentDifficulty++;
+        }
+        else
+        {
+            currentDifficulty = Difficulty.Easy;
+        }
+        difficultyText.text = currentDifficulty.ToString();
+    }
+    public void OnFullscreen()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
+    }
+    public void OnVsync()
+    {
+        QualitySettings.vSyncCount = (vsync == 1 ? 0 : 1);
+        vsync = QualitySettings.vSyncCount;
+
+        vsynText.text = (vsync == 0 ? "Vsync: Off" : "Vsync: On");
+    }
+}

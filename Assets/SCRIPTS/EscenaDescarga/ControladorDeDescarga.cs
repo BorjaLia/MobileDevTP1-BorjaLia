@@ -91,8 +91,8 @@ public class ControladorDeDescarga : MonoBehaviour
 			
 		CollCamion.enabled = false;
 		Pj.CambiarADescarga();
-		
-		
+        TouchInputManager.Get().SetControlType(TouchInputManager.TouchControlType.DriveControl,Pj.playerName);
+        
 		GameObject go;
 		//asigna los pallets a las estanterias
 		for(int i = 0; i < Pj.Bolasas.Length; i++)

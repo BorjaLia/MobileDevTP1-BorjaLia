@@ -114,7 +114,7 @@ public class CustomSwipeController : OnScreenControl, IPointerDownHandler, IPoin
         {
             output = new Vector2(0, Mathf.Sign(delta.y) * 1);
         }
-        Debug.Log("value " + output);
+        //Debug.Log("value " + output);
 
         SendValueToControl(output);
     }

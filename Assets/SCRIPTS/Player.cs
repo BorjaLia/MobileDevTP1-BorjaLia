@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Player : MonoBehaviour 
 {
+
+	public string playerName = "Player";
+
 	public int Dinero = 0;
 	public int IdPlayer = 0;
 	

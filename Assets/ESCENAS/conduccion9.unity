@@ -128928,6 +128928,11 @@ PrefabInstance:
       propertyPath: IdPlayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114643806136207610, guid: b81b1a58a0f14c9439cbdd014e695f71,
+        type: 3}
+      propertyPath: playerName
+      value: Player2
+      objectReference: {fileID: 0}
     - target: {fileID: 114911345111112572, guid: b81b1a58a0f14c9439cbdd014e695f71,
         type: 3}
       propertyPath: CamDescarga
@@ -129140,6 +129145,11 @@ PrefabInstance:
         type: 3}
       propertyPath: SteerAction.m_Name
       value: Steer
+      objectReference: {fileID: 0}
+    - target: {fileID: 114643806136207610, guid: b81b1a58a0f14c9439cbdd014e695f71,
+        type: 3}
+      propertyPath: playerName
+      value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 114911345111112572, guid: b81b1a58a0f14c9439cbdd014e695f71,
         type: 3}
@@ -129658,6 +129668,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7933991266085788348, guid: 47456396a47b64442940d6201dde0b36,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8285316822926147292, guid: 47456396a47b64442940d6201dde0b36,
         type: 3}
       propertyPath: m_ControlPath
@@ -129805,6 +129820,16 @@ PrefabInstance:
     - target: {fileID: 4943743439705074470, guid: 47456396a47b64442940d6201dde0b36,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022892562319939836, guid: 47456396a47b64442940d6201dde0b36,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933991266085788348, guid: 47456396a47b64442940d6201dde0b36,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8285316822926147292, guid: 47456396a47b64442940d6201dde0b36,

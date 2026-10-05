@@ -456,7 +456,8 @@ public class GameManager : MonoBehaviour
 
     void CambiarACarrera()
     {
-        TouchInputManager.Get().SetControlType(TouchInputManager.TouchControlType.DriveControl);
+        TouchInputManager.Get().SetControlType(TouchInputManager.TouchControlType.DriveControl,"Player1");
+        if(!SettingsManager.singleplayer) TouchInputManager.Get().SetControlType(TouchInputManager.TouchControlType.DriveControl,"Player2");
 
         //Debug.Log("CambiarACarrera()");
 

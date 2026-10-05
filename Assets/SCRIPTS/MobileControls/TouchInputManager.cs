@@ -6,18 +6,19 @@ using UnityEngine;
 public class TouchInputManager : MonoBehaviour
 {
     [Serializable]
-    public class TouchInputs {
-
+    public class TouchInputs
+    {
         [SerializeField] public CustomHorizontalController driveControl;
         [SerializeField] public CustomSwipeController handleControl;
     }
 
-    [SerializeField] public List<TouchInputs> inputList = new List<TouchInputs>();
+    //[SerializeField] public List<TouchInputs> inputList = new List<TouchInputs>();
+    [SerializeField] public Dictionary<string, TouchInputs> inputDictionary = new Dictionary<string, TouchInputs>();
 
-    public enum TouchControlType { DriveControl,HandleControl }
+    public enum TouchControlType { DriveControl, HandleControl }
 
-    private TouchControlType m_ControlType = TouchControlType.HandleControl;
-    private TouchControlType currentControlType { get { return m_ControlType; } set { SetControlType(value); } }
+    //private TouchControlType m_ControlType = TouchControlType.HandleControl;
+    //private TouchControlType currentControlType { get { return m_ControlType; } set { SetControlType(value); } }
 
     private static TouchInputManager _Instance;
     public static TouchInputManager Instance
@@ -40,40 +41,32 @@ public class TouchInputManager : MonoBehaviour
 
     private void Start()
     {
-        if (inputList.Count < 2) { Debug.LogWarning("Less than 2 Touch inputs selected!"); }
-
         if (SettingsManager.singleplayer)
         {
-            foreach (TouchInputs input in inputList)
-            {
-                if(input.driveControl.transform.parent.transform.gameObject.name == "Player1")
-                {
-                    Vector2 anchorMaxSize = input.driveControl.transform.parent.GetComponent<RectTransform>().anchorMax;
-                    anchorMaxSize.x = anchorMaxSize.y;
-                    input.driveControl.transform.parent.GetComponent<RectTransform>().anchorMax = anchorMaxSize;
-                }
-                else
-                {
-                    Destroy(inputList[0].driveControl.transform.parent.transform.gameObject);
-                }
-            }
+            Vector2 anchorMaxSize = inputDictionary["Player1"].driveControl.transform.parent.GetComponent<RectTransform>().anchorMax;
+            anchorMaxSize.x = anchorMaxSize.y;
+
+            inputDictionary["Player1"].driveControl.transform.parent.GetComponent<RectTransform>().anchorMax = anchorMaxSize;
+
+            Destroy(inputDictionary["Player2"].driveControl.transform.parent.gameObject);
+            inputDictionary.Remove("Player2");
         }
-    }
-
-    public void SetControlType(TouchControlType type)
-    {
-        m_ControlType = type;
-
-        foreach (var input in inputList)
+        else
         {
-                input.driveControl.gameObject.SetActive(type == TouchControlType.DriveControl);
-                input.handleControl.gameObject.SetActive(type == TouchControlType.HandleControl);
+            if (inputDictionary.Count < 2) { Debug.LogWarning("Less than 2 Touch inputs selected!"); }
         }
     }
 
-    public void RegisterInput(TouchInputs input)
+    public void SetControlType(TouchControlType type,string key)
     {
-        inputList.Add(input);
+        inputDictionary[key].driveControl.gameObject.SetActive(type == TouchControlType.DriveControl);
+        inputDictionary[key].handleControl.gameObject.SetActive(type == TouchControlType.HandleControl);   
+    }
+
+    public void RegisterInput(TouchInputs input, string key)
+    {
+        inputDictionary[key] = input;
+        //inputList.Add(input);
         Debug.Log("Registered new input");
     }
 }

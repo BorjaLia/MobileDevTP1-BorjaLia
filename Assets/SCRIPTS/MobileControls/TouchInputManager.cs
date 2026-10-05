@@ -41,6 +41,23 @@ public class TouchInputManager : MonoBehaviour
     private void Start()
     {
         if (inputList.Count < 2) { Debug.LogWarning("Less than 2 Touch inputs selected!"); }
+
+        if (SettingsManager.singleplayer)
+        {
+            foreach (TouchInputs input in inputList)
+            {
+                if(input.driveControl.transform.parent.transform.gameObject.name == "Player1")
+                {
+                    Vector2 anchorMaxSize = input.driveControl.transform.parent.GetComponent<RectTransform>().anchorMax;
+                    anchorMaxSize.x = anchorMaxSize.y;
+                    input.driveControl.transform.parent.GetComponent<RectTransform>().anchorMax = anchorMaxSize;
+                }
+                else
+                {
+                    Destroy(inputList[0].driveControl.transform.parent.transform.gameObject);
+                }
+            }
+        }
     }
 
     public void SetControlType(TouchControlType type)

@@ -113898,6 +113898,14 @@ MonoBehaviour:
     PJ: {fileID: 0}
   Player1: {fileID: 13058}
   Player2: {fileID: 27660010}
+  cam1:
+  - {fileID: 6356}
+  - {fileID: 6358}
+  - {fileID: 6359}
+  cam2:
+  - {fileID: 6357}
+  - {fileID: 6360}
+  - {fileID: 6355}
   Esqueleto1: {fileID: 3493}
   Esqueleto2: {fileID: 3492}
   PosEsqsCarrera:

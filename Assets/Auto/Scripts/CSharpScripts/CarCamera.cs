@@ -22,10 +22,13 @@ public class CarCamera : MonoBehaviour
 	void Start()
 	{
 		raycastLayers = ~ignoreLayers;
+
+		if (target == null) Destroy(this.gameObject);
 	}
 
 	void FixedUpdate()
 	{
+		if (target == null) return;
 		currentVelocity = Vector3.Lerp(prevVelocity, target.root.GetComponent<Rigidbody>().linearVelocity, velocityDamping * Time.deltaTime);
 		currentVelocity.y = 0;
 		prevVelocity = currentVelocity;
@@ -33,6 +36,7 @@ public class CarCamera : MonoBehaviour
 	
 	void LateUpdate()
 	{
+		if (target == null) return;
 		float speedFactor = Mathf.Clamp01(target.root.GetComponent<Rigidbody>().linearVelocity.magnitude / 70.0f);
 		GetComponent<Camera>().fieldOfView = Mathf.Lerp(55, 72, speedFactor);
 		float currentDistance = Mathf.Lerp(7.5f, 6.5f, speedFactor);

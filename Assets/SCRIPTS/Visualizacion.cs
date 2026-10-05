@@ -8,7 +8,7 @@ using System.Collections;
 /// </summary>
 public class Visualizacion : MonoBehaviour 
 {
-	public enum Lado{Izq, Der}
+	public enum Lado{Izq, Der, Todo}
 	public Lado LadoAct;
 	
 	ControlDireccion Direccion;
@@ -201,6 +201,11 @@ public class Visualizacion : MonoBehaviour
 			
 		case Lado.Izq:
 			r.x = 0;
+			break;
+
+		case Lado.Todo:
+				r.x = 0;
+				r.width = 1;
 			break;
 		}
 		

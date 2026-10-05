@@ -8,8 +8,7 @@ public class CustomSwipeController : OnScreenControl, IPointerDownHandler, IPoin
     [InputControl(layout = "Vector2")]
     [SerializeField] private string m_ControlPath;
 
-    [SerializeField] private float startSwipeSpeed = 1000f;
-    [SerializeField] private float stopSwipeSpeed = 10f;
+    [SerializeField] private float startSwipeSpeed = 100f;
 
     private Vector2 referencePoint;
     private Vector2 currentPointerPosition;
@@ -52,7 +51,7 @@ public class CustomSwipeController : OnScreenControl, IPointerDownHandler, IPoin
         }
         else
         {
-            SendValueToControl(Vector2.zero);
+            //SendValueToControl(Vector2.zero);
         }
 
         isDragging = false;
@@ -63,7 +62,7 @@ public class CustomSwipeController : OnScreenControl, IPointerDownHandler, IPoin
     {
         if (needsZeroReset)
         {
-            SendValueToControl(Vector2.zero);
+            //SendValueToControl(Vector2.zero);
             needsZeroReset = false;
         }
 
@@ -82,17 +81,6 @@ public class CustomSwipeController : OnScreenControl, IPointerDownHandler, IPoin
                 referencePoint = currentPointerPosition;
             }
         }
-        else
-        {
-            if (speed < stopSwipeSpeed)
-            {
-                EvaluateSwipe();
-
-                isSwiping = false;
-                referencePoint = currentPointerPosition;
-                needsZeroReset = true;
-            }
-        }
 
         lastPointerPosition = currentPointerPosition;
     }
@@ -104,17 +92,22 @@ public class CustomSwipeController : OnScreenControl, IPointerDownHandler, IPoin
 
         if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y))
         {
-            output = new Vector2(Mathf.Sign(delta.x) * 1, 0);
+            if(Mathf.Sign(delta.x) > 0)  output = Vector2.right;
+            else output = Vector2.left;
         }
         else if (Mathf.Abs(delta.y) > Mathf.Abs(delta.x))
         {
-            output = new Vector2(0, Mathf.Sign(delta.y) * 1);
+            if(Mathf.Sign(delta.y) > 0)  output = Vector2.up;
+            else output = Vector2.down;
+
         }
         else if (delta != Vector2.zero)
         {
-            output = new Vector2(0, Mathf.Sign(delta.y) * 1);
+            if (Mathf.Sign(delta.y) > 0) output = Vector2.up;
+            else output = Vector2.down;
         }
-        //Debug.Log("value " + output);
+
+        Debug.Log("out: " + output);
 
         SendValueToControl(output);
     }

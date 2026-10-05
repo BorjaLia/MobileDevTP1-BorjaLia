@@ -1,8 +1,11 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MngPts : MonoBehaviour 
 {
+	public string mainSceneName;
+
 	Rect R = new Rect();
 	
 	public float TiempEmpAnims = 2.5f;
@@ -43,43 +46,12 @@ public class MngPts : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		//PARA JUGAR
-		if(Input.GetKeyDown(KeyCode.KeypadEnter) || 
-		   Input.GetKeyDown(KeyCode.Return) ||
-		   Input.GetKeyDown(KeyCode.Mouse0))
-		{
-			Application.LoadLevel(0);
-		}
-		
-		//REINICIAR
-		if(Input.GetKeyDown(KeyCode.Mouse1) ||
-		   Input.GetKeyDown(KeyCode.Keypad0))
-		{
-			Application.LoadLevel(Application.loadedLevel);
-		}
-		
-		//CIERRA LA APLICACION
-		if(Input.GetKeyDown(KeyCode.Escape))
-		{
-			Application.Quit();
-		}
-		
-		//CALIBRACION DEL KINECT
-		if(Input.GetKeyDown(KeyCode.Backspace))
-		{
-			Application.LoadLevel(3);
-		}		
-		
-		
 		TiempEspReiniciar -= Time.deltaTime;
 		if(TiempEspReiniciar <= 0 )
 		{
-			Application.LoadLevel(0);
+			SceneManager.LoadSceneAsync(mainSceneName);
 		}
-		
-		
-		
-		
+
 		if(ActivadoAnims)
 		{
 			TempoParpadeo += Time.deltaTime;

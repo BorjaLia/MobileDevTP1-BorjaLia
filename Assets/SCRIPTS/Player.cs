@@ -92,26 +92,30 @@ public class Player : MonoBehaviour
 	
 	public void CambiarACalibracion()
 	{
+        TouchInputManager.Get().SetControlType(TouchInputManager.TouchControlType.HandleControl, playerName);
 		MiVisualizacion.CambiarACalibracion();
 		EstAct = Player.Estados.EnCalibracion;
 	}
 	
 	public void CambiarATutorial()
 	{
-		MiVisualizacion.CambiarATutorial();
+        TouchInputManager.Get().SetControlType(TouchInputManager.TouchControlType.HandleControl, playerName);
+        MiVisualizacion.CambiarATutorial();
 		EstAct = Player.Estados.EnTutorial;
 		ContrTuto.Iniciar();
 	}
 	
 	public void CambiarAConduccion()
 	{
-		MiVisualizacion.CambiarAConduccion();
+        TouchInputManager.Get().SetControlType(TouchInputManager.TouchControlType.DriveControl, playerName);
+        MiVisualizacion.CambiarAConduccion();
 		EstAct = Player.Estados.EnConduccion;
 	}
 	
 	public void CambiarADescarga()
 	{
-		MiVisualizacion.CambiarADescarga();
+        TouchInputManager.Get().SetControlType(TouchInputManager.TouchControlType.HandleControl, playerName);
+        MiVisualizacion.CambiarADescarga();
 		EstAct = Player.Estados.EnDescarga;
 	}
 	
@@ -126,6 +130,4 @@ public class Player : MonoBehaviour
 			}				
 		}
 	}
-	
-	
 }

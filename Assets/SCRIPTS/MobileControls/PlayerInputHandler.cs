@@ -12,9 +12,8 @@ public class PLayerInputHandler : MonoBehaviour
     [SerializeField] private RawImage rightImage;
     [SerializeField] private Image rightBackgorund;
 
-
-    [SerializeField] public static float controlFadeTime;
-    private static float currentFadeTime;
+    [SerializeField] public float controlFadeTime;
+    private float currentFadeTime;
 
     void Start()
     {
@@ -64,7 +63,7 @@ public class PLayerInputHandler : MonoBehaviour
         if (currentFadeTime < 0) currentFadeTime = 0;
     }
 
-    public static void ResetFade()
+    public void ResetFade()
     {
         currentFadeTime = 2 * controlFadeTime;
     }

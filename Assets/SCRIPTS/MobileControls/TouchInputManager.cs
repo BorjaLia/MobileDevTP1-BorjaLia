@@ -60,7 +60,8 @@ public class TouchInputManager : MonoBehaviour
     public void SetControlType(TouchControlType type,string key)
     {
         inputDictionary[key].driveControl.gameObject.SetActive(type == TouchControlType.DriveControl);
-        inputDictionary[key].handleControl.gameObject.SetActive(type == TouchControlType.HandleControl);   
+        inputDictionary[key].handleControl.gameObject.SetActive(type == TouchControlType.HandleControl);
+        PLayerInputHandler.ResetFade();
     }
 
     public void RegisterInput(TouchInputs input, string key)

@@ -8,7 +8,9 @@ public class PLayerInputHandler : MonoBehaviour
     [SerializeField] private CustomSwipeController handleControler;
 
     [SerializeField] private RawImage leftImage;
+    [SerializeField] private Image leftBackgorund;
     [SerializeField] private RawImage rightImage;
+    [SerializeField] private Image rightBackgorund;
 
 
     [SerializeField] public float controlFadeTime;
@@ -34,7 +36,7 @@ public class PLayerInputHandler : MonoBehaviour
 
         handleControler.GetComponent<RawImage>().color = imageColor;
 
-        currentFadeTime = 2 * controlFadeTime;
+        ResetFade();
     }
 
     private void Update()
@@ -45,12 +47,25 @@ public class PLayerInputHandler : MonoBehaviour
         leftColor.a = currentFadeTime / 4.0f;
         leftImage.color = leftColor;
 
+        Color leftBgColor = leftBackgorund.color;
+        leftBgColor.a = currentFadeTime / 4.0f;
+        leftBackgorund.color = leftBgColor;
+
         Color rightColor = rightImage.color;
         rightColor.a = currentFadeTime / 4.0f;
         rightImage.color = rightColor;
 
+        Color rightBgColor = rightBackgorund.color;
+        rightBgColor.a = currentFadeTime / 4.0f;
+        rightBackgorund.color = rightBgColor;
+
         currentFadeTime -= Time.deltaTime;
 
         if (currentFadeTime < 0) currentFadeTime = 0;
+    }
+
+    public void ResetFade()
+    {
+        currentFadeTime = 2 * controlFadeTime;
     }
 }

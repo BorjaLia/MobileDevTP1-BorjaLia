@@ -129721,9 +129721,19 @@ PrefabInstance:
       objectReference: {fileID: 1992896570}
     - target: {fileID: 2571744110644014345, guid: 47456396a47b64442940d6201dde0b36,
         type: 3}
+      propertyPath: leftBackgorund
+      value: 
+      objectReference: {fileID: 1992896573}
+    - target: {fileID: 2571744110644014345, guid: 47456396a47b64442940d6201dde0b36,
+        type: 3}
       propertyPath: controlFadeTime
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2571744110644014345, guid: 47456396a47b64442940d6201dde0b36,
+        type: 3}
+      propertyPath: rightBackgorund
+      value: 
+      objectReference: {fileID: 1992896572}
     - target: {fileID: 4943743439705074470, guid: 47456396a47b64442940d6201dde0b36,
         type: 3}
       propertyPath: m_IsActive
@@ -129774,6 +129784,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+--- !u!114 &1992896572 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9034170740942895246, guid: 47456396a47b64442940d6201dde0b36,
+    type: 3}
+  m_PrefabInstance: {fileID: 1992896568}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &1992896573 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5450151731693857389, guid: 47456396a47b64442940d6201dde0b36,
+    type: 3}
+  m_PrefabInstance: {fileID: 1992896568}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &1537321493228607737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -129914,9 +129948,19 @@ PrefabInstance:
       objectReference: {fileID: 1537321493228607738}
     - target: {fileID: 2571744110644014345, guid: 47456396a47b64442940d6201dde0b36,
         type: 3}
+      propertyPath: leftBackgorund
+      value: 
+      objectReference: {fileID: 1537321493228607741}
+    - target: {fileID: 2571744110644014345, guid: 47456396a47b64442940d6201dde0b36,
+        type: 3}
       propertyPath: controlFadeTime
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2571744110644014345, guid: 47456396a47b64442940d6201dde0b36,
+        type: 3}
+      propertyPath: rightBackgorund
+      value: 
+      objectReference: {fileID: 1537321493228607740}
     - target: {fileID: 4943743439705074470, guid: 47456396a47b64442940d6201dde0b36,
         type: 3}
       propertyPath: m_IsActive
@@ -129966,6 +130010,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+--- !u!114 &1537321493228607740 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9034170740942895246, guid: 47456396a47b64442940d6201dde0b36,
+    type: 3}
+  m_PrefabInstance: {fileID: 1537321493228607737}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &1537321493228607741 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5450151731693857389, guid: 47456396a47b64442940d6201dde0b36,
+    type: 3}
+  m_PrefabInstance: {fileID: 1537321493228607737}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
